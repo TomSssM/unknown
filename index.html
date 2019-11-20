@@ -11,9 +11,9 @@
 <body>
 <iframe id="hack" src="https://www.timetable.sbmt.by/"></iframe>
 <script>
-    document.body.addEventListener('scroll', (e) => {
-        e.preventDefault();
-    })
+    const iframeElem = document.querySelector('#hack');
+
+    console.log('XSS vulnarability exposed:', iframeElem.contentWindow);
 </script>
 </body>
 </html>
