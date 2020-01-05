@@ -5,8 +5,8 @@ elem.addEventListener('keydown', ({ key }) => {
     renderMessage(`keydown event ${key}`);
 });
 
-elem.addEventListener('input', () => {
-    renderMessage(`input event`);
+elem.addEventListener('input', ({ inputType }) => {
+    renderMessage(`input event: ${inputType}`);
 });
 
 function renderMessage(data) {
